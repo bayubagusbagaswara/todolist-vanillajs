@@ -10,4 +10,19 @@ todoButton.addEventListener("click, addTodo");
 function addTodo(event) {
   // Prevent form from submitting
   event.preventDefault();
+
+  // Todo DIV
+  const todoDiv = document.createElement("div");
+  todoDiv.classList.add("todo");
+
+  // Create LI
+  const newTodo = document.createElement("li");
+  newTodo.innerText = "hey";
+  newTodo.classList.add("todo-item");
+  todoDiv.appendChild(newTodo);
+
+  //   Check Mark Button
+
+  const completerdButton = document.createElement("button");
+  completerdButton.innerText = '<i class="fas fa-check"></i>';
 }
