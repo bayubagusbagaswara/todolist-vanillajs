@@ -21,8 +21,18 @@ function addTodo(event) {
   newTodo.classList.add("todo-item");
   todoDiv.appendChild(newTodo);
 
-  //   Check Mark Button
+  // Check Mark Button
+  const completedButton = document.createElement("button");
+  completedButton.innerHTML = '<i class="fas fa-check"></i>';
+  completedButton.classList.add("complete-btn");
+  todoDiv.appendChild(completedButton);
 
-  const completerdButton = document.createElement("button");
-  completerdButton.innerText = '<i class="fas fa-check"></i>';
+  // Check Trash Button
+  const trashButton = document.createElement("button");
+  trashButton.innerHTML = '<i class="fas fa-trash"></i>';
+  trashButton.classList.add("complete-btn");
+  todoDiv.appendChild(trashButton);
+
+  // Append to List
+  todoList.appendChild(todoDiv);
 }
